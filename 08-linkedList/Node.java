@@ -26,8 +26,7 @@ public class Node{
     }
 
     public String toString(){
-	return "Data: " data 
-	return data;
+	return "Data: "+ data; 
     }
 
 }
