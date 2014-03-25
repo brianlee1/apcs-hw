@@ -1,15 +1,19 @@
 public class MyLinkedList2b{
     private Node head;
     private int length;
+    private Node tail;	
+    
+    //a little confused about tail
     
     public MyLinkedList2b(){
-	  head = new Node("dummy");
+	head = new Node("dummy");
+	tail = head;
     }
     
     public void add(String s){
-	    Node temp = new Node(s);
-	temp.setNext(head.getNext());
-	head.setNext(temp);
+	Node temp = new Node(s);
+	tail.setNext(temp); 
+	tail = temp;
 	length++;
     }
     
