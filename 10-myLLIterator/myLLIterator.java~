@@ -1,0 +1,12 @@
+public class myLLIterator<E> implement Iterator<E>{
+    public boolean hasNext(){
+	return false;
+    }
+    public E next(){
+	return null;
+    }
+    public void remove(){
+
+    }
+
+}
