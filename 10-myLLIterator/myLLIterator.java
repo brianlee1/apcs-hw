@@ -2,17 +2,19 @@ import java.util.*;
 import java.io.*;
 
 
-public class myLLIterator<Node> implements Iterator<String>{
-    private Node currentNode;
+public class myLLIterator<E> implements Iterator<E>{
+    private Node<E> currentNode;
     
-    public myLLIterator<Node>(Node n){
+    public myLLIterator(Node<E> n){
 	currentNode = n;
     }
     
     public boolean hasNext(){
-	return false;
+	return currentNode != null;
     }
     public Node next(){
+	E data = currentNode.getNext();
+	currentNode = currentNode.getNext();
 	return null;
     }
     public void remove(){
