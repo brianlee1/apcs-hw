@@ -1,0 +1,20 @@
+public class myStack{
+
+    private Node top;
+    
+    //constructor
+    public myStack(){
+	top = null;
+    }
+
+    //push
+
+    //pop
+
+    //peek
+
+    //isEmpty
+
+    //toString
+
+}
