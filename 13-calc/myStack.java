@@ -23,8 +23,10 @@ public class myStack{
     }
     //pop
     public double pop(){
+	double x = stack[numElements - 1];
+	stack[numElements - 1] = 0.0;
 	numElements--;
-	return stack[numElements + 1];
+	return x;
     }
 
     //peek
