@@ -1,36 +1,39 @@
 public class myStack{
 
-    private Node top;
     private int numElements;
+    private double[] stack;
     //constructor
     public myStack(){
-	top = null;
+	stack = new double[10];
 	numElements = 0;
     }
 
     //push
-    public void push(String s){
-	Node n = new Node(s);
-	n.setNext(top);
-	top = n;
+    public void push(double s){
+    	if (numElements == stack.length){
+    		double[] temp = new double[stack.length * 2];
+    		for (int i = 0; i < stack.length; i++){
+    			temp[i] = stack[i];
+    		}
+    		stack = temp;
+    	}
+    	stack[numElements] = s;
+
 	numElements++;
     }
     //pop
-    public String pop(){
-	String s;
-	s = top.getData();
-	top = top.getNext();
+    public double pop(){
 	numElements--;
-	return s;
+	return stack[numElements + 1];
     }
 
     //peek
-    public String peek(){
-	return top.getData();
+    public double peek(){
+	return stack[numElements - 1];
     }
     //isEmpty
     public boolean isEmpty(){
-	return top == null;
+	return numElements==0;
     }
 
     public int getSize(){
@@ -40,11 +43,10 @@ public class myStack{
     //toString
     public String toString(){
 	String tmp = "";
-	Node currentNode = top;
-	while (currentNode != null){
-	    tmp += currentNode.getData() + ", ";
-	    currentNode = currentNode.getNext();
-	}
+
+	for (int i = 0; i < numElements; i++){
+	    tmp += stack[i]  + ", ";	
+	}	
 	return tmp;
     }
 }
