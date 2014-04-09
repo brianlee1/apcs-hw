@@ -12,8 +12,8 @@ public class rpn{
 	if (stack.getSize() < 2){
 	    return;
 	}
-	else{
-	    double x = stack.pop();
+	else{                         
+	    double x = stack.pop();         //ishmam suggested making a variable for each pop
 	    double y = stack.pop();
 	    stack.push(x + y);
 	}
@@ -23,24 +23,36 @@ public class rpn{
 	if (stack.getSize() < 2){
 	    return;
 	}
-	stack.push(stack.pop() - stack.pop());
+	else{
+		double x = stack.pop();
+		double y = stack.pop();
+		stack.push(x - y);
+	}
     }
   
     public void multiply(){
 	if (stack.getSize() < 2){
 	    return;
 	}
-	stack.push(stack.pop() * stack.pop());
+	else{
+		double x = stack.pop();
+		double y = stack.pop();
+		stack.push(x * y);
+	}
     }
   
     public void divide(){
 	if (stack.getSize() < 2){
 	    return;
 	}
-	stack.push(stack.pop() / stack.pop());
+	else{
+		double x = stack.pop();
+		double y = stack.pop();
+		stack.push(x / y);
+	}
     }
     
-    public void op(String s){
+    public void op(String s){        //forgot to put this in, ishmam pointed out
 	if (s.equals("+"))
 	    this.add();
 	if (s.equals("-"))
@@ -59,11 +71,10 @@ public class rpn{
 	}
 	return s;
 	*/
-	return stack.toString();
+	return stack.toString();            //from ishmam
     }
 
     
-    //will do main function later
     public static void main(String[]args){
 	rpn n = new rpn();
 	/*	Scanner sc = new Scanner(System.in);
