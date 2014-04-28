@@ -33,6 +33,6 @@ public class treeNode{
     }
 
     public String toString(){
-	return "";
+	return "" + data;
     }
 }
