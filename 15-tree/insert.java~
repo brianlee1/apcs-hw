@@ -1,6 +1,0 @@
-public class insert{
-    private treeNode toadd;
-
-    public void ins3rt(int x){
-	toadd.setData(x);
-	
