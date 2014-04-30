@@ -16,19 +16,19 @@ public class treeNode{
 	return data;
     }
 
-    public void setRight(Node n){
+    public void setRight(treeNode n){
 	right = n;
     }
 
-    public void setLeft(Node n){
+    public void setLeft(treeNode n){
 	left = n;
     }
 
-    public void getRight(){
+    public treeNode getRight(){
 	return right;
     }
 
-    public void getLeft(){
+    public treeNode getLeft(){
 	return left;
     }
 
