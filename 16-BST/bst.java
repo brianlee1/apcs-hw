@@ -46,5 +46,18 @@ public class bst{
     		q.setRight(new treeNode(x));
     	}
     }
+
+    public void print(treeNode n){
+	if (n == null){
+	    return;
+	}
+	else{
+	    print(n.getLeft());
+	    System.out.println(n);
+	    //print(n.getLeft());
+	    print(n.getRight());
+	}
+    }
+	       
 }
        

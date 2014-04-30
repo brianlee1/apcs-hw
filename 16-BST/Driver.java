@@ -6,7 +6,9 @@ public class Driver{
 	n.insert(15);
 	n.insert(30);
 	n.insert(25);
-	System.out.print(n.search(20));
-	
+	for (int i = 17; i < 24; i++){
+	    n.insert(i);
+	}
+	n.print(n.search(20));
     }
 }
