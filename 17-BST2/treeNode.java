@@ -24,11 +24,11 @@ public class treeNode{
 	left = n;
     }
 
-    public void getRight(){
+    public treeNode getRight(){
 	return right;
     }
 
-    public void getLeft(){
+    public treeNode getLeft(){
 	return left;
     }
 
