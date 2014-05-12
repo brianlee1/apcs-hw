@@ -14,12 +14,16 @@ public class heapSort{
     }
 
     public void sort(int index){
-	if (h.get(index) < h.get(index * 2 + 1)){
-	    int temp = h.get(index * 2 + 1);
-	    h.set(index * 2 + 1, h.get(index));
-	    h.set(index, temp);
+	for (int i = 0; i < h.size(); i++){
+	    if (h.get(index) < h.get(index * 2 + 1)){
+		int temp = h.get(index * 2 + 1);
+		h.set(index * 2 + 1, h.get(index));
+		h.set(index, temp);
+	    }
 	}
+	
     }
+
 }
 	    
  
