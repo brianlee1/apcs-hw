@@ -18,5 +18,8 @@ public class heapSort{
 	    int temp = h.get(index * 2 + 1);
 	    h.set(index * 2 + 1, h.get(index));
 	    h.set(index, temp);
+	}
+    }
+}
 	    
  
